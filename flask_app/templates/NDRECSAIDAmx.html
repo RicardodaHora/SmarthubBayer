@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquivo para o Cultivio</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='estilo5.css')}}">
+</head>
+<body>   
+<!- carrega os 100 dados atuais do arquivo de nitrogenio e densidade do pais e os dados de comparação em outra chamada do metodo.->           
+        {% for table in table%}          
+      
+        {{ table|safe }}
+              
+        {% endfor %} 
+              
+</body>
+</html>

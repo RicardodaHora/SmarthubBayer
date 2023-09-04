@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enfermedades del maiz</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='estilo2m.css')}}">
+</head>
+<body>
+    <form action="{{ url_for('homepagem') }}" method="post">
+<div class="conteudo">
+   
+        <div id="nav">
+             <div id="menu">
+            <a href="{{url_for('homepagem')}}"> Enfermedades del maiz</a>
+            <a href="{{url_for('page1m')}}"> Corn note</a>
+            <a href="{{url_for('page2m')}}"> DREC_NREC </a>
+            <label>{{nome}}</label>        
+        </div>
+
+        </div>
+      <div id="sidebar">
+        </div>
+	<!- monta a area onde o usuario escolhe os dados do produto pelos combos ->
+        <div id="main">
+        <div id="produto3">
+                <label>Zone</label>
+               </div>
+       <div id="cb3">
+             <p1>
+               <p>
+                <select id="cb3" name=cb3 onchange="this.form.submit()" {{desabilita3}}>
+                    <option value="{{ cb3 }}"> {{ cb3}}</option>
+               {% for pipeline in pipeline%}
+       <option value="{{ pipeline }}">{{ pipeline }}</option>
+ {% endfor %}
+                     <option value="" ></option>
+            </select>
+          </p>
+               </p1>
+                </div>
+        </div>
+         <div id="main1">
+            <div id="produto4">
+                <label>Brand</label>
+               </div>
+            <div id="cb4">
+             <p1>
+               <p>
+                <select id="cb2" name=cb2 onchange="this.form.submit()" {{desabilita3}}>
+                <option value="{{ cb2 }}"> {{ cb2}}</option>
+                {% for marca in marca%}
+       <option value="{{ marca}}">{{ marca }}</option>
+                 <option value="" ></option>
+ {% endfor %}
+            </select>
+          </p>
+               </p1>
+                </div>
+        </div>
+    <div id="main2">
+             <div id="produto">
+                <label>Producto</label>
+               </div>
+ 
+            <div id="cb1">
+                <p1>
+ 
+               <p>
+                   <select id="cb1" name=cb1 onchange="this.form.submit()" {{desabilita3}}>
+                       <option value="{{ cb1 }}"> {{ cb1}}</option>
+ 
+                {% for produto in produto1 %}
+       <option value="{{ produto }}">{{ produto}}</option>
+ {% endfor %}
+                        <option value="" ></option>
+            </select>
+          </p>
+               </p1>
+                </div>
+        </div>
+    </form>
+     <!- carrega a tabela com os nomes das doenças ->
+     <div id="conteudo1">
+    <table>
+    <tr>
+        <td> {{ doencas[0]}}</td>
+        </tr>
+        <tr>
+        <td> {{ doencas[1]}}</td>
+        </tr>
+        <tr>
+        <td> {{ doencas[2]}} </td>
+        </tr>
+        <tr>
+        <td> {{ doencas[3]}}</td>
+        </tr>
+        <tr>
+        <td> {{ doencas[4]}}</td>
+        </tr>
+        <tr>
+            <td> {{ doencas[5]}}</td>
+            </tr>
+            <tr>
+                <td> {{ doencas[6]}} </td>
+                </tr>
+                <tr>
+                    <td> {{ doencas[7]}}</td>
+                    </tr>
+                    <tr>
+                        <td> {{ doencas[8]}}</td>
+                        </tr>
+                        <tr>
+</table>
+         </div>
+    	<!- monta os combos com os dados das doenças do produto filtrado nos combos anteriores. ->
+        <div id="conteudo2">
+           <p1>
+               <p>
+                <select id="cb5" name=cb5  {{desabilita2}}>
+
+                <option value="{{ cb5 }}"> {{ cb5}}</option>
+                <option value="" ></option>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+                <option value="6" >6</option>
+                <option value="7" >7</option>
+                <option value="8" >8</option>
+                <option value="9" >9</option>
+                <option value="10" >10</option>
+
+            </select>
+          </p>
+               </p1>
+      <p>
+            <select id="cb6" name=cb6  {{desabilita2}}>
+
+                <option value="{{ cb6 }}"> {{ cb6}}</option>
+                <option value="" ></option>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+                <option value="6" >6</option>
+                <option value="7" >7</option>
+                <option value="8" >8</option>
+                <option value="9" >9</option>
+                <option value="10" >10</option>
+            </select>
+        </p>
+        <p>
+                <select id="cb7" name=cb7  {{desabilita2}} >
+
+                <option value="{{ cb7 }}"> {{ cb7}}</option>
+                <option value="" ></option>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+                <option value="6" >6</option>
+                <option value="7" >7</option>
+                <option value="8" >8</option>
+                <option value="9" >9</option>
+                <option value="10" >10</option>
+                </select>
+            </p>
+            <p>
+              <select id="cb8" name=cb8 {{desabilita2}}>
+                <option value="{{ cb8 }}"> {{ cb8}}</option>
+                <option value="" ></option>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+                <option value="6" >6</option>
+                <option value="7" >7</option>
+                <option value="8" >8</option>
+                <option value="9" >9</option>
+                <option value="10" >10</option>
+            </select>
+          </p>
+      <p>
+            <select id="cb9" name=cb9  {{desabilita2}}>
+                <option value="{{ cb9 }}"> {{ cb9}}</option>
+                <option value="" ></option>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+                <option value="6" >6</option>
+                <option value="7" >7</option>
+                <option value="8" >8</option>
+                <option value="9" >9</option>
+                <option value="10" >10</option>
+            </select>
+        </p>
+        <p>
+                <select id="cb10" name=cb10  {{desabilita2}}>
+                <option value="{{ cb10 }}"> {{ cb10}}</option>
+                <option value="" ></option>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+                <option value="6" >6</option>
+                <option value="7" >7</option>
+                <option value="8" >8</option>
+                <option value="9" >9</option>
+                <option value="10" >10</option>
+                </select>
+            </p>
+            <p>
+                <select id="cb11" name=cb11 {{desabilita2}}>
+                <option value="{{ cb11 }}"> {{ cb11}}</option>
+                <option value="" ></option>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+                <option value="6" >6</option>
+                <option value="7" >7</option>
+                <option value="8" >8</option>
+                <option value="9" >9</option>
+                <option value="10" >10</option>
+            </select>
+          </p>
+      <p>
+            <select id="cb12" name=cb12  {{desabilita2}}>
+               <option value="{{ cb12 }}"> {{ cb12}}</option>
+               <option value="" ></option>
+               <option value="1" >1</option>
+               <option value="2" >2</option>
+               <option value="3" >3</option>
+               <option value="4" >4</option>
+               <option value="5" >5</option>
+               <option value="6" >6</option>
+               <option value="7" >7</option>
+               <option value="8" >8</option>
+               <option value="9" >9</option>
+               <option value="10" >10</option>
+            </select>
+        </p>
+        <p>
+                <select id="cb13" name=cb13  {{desabilita2}}>
+                <option value="{{ cb13 }}"> {{ cb13}}</option>
+                <option value="" ></option>
+                <option value="1" >1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+                <option value="6" >6</option>
+                <option value="7" >7</option>
+                <option value="8" >8</option>
+                <option value="9" >9</option>
+                <option value="10" >10</option>
+                </select>
+            </p>
+        </div>
+        <div id="main5">  
+                
+           </div>
+    <div id="main4"></div>     
+    
+    
+    <div id="conteudo4"> </div>
+       <div id="conteudo5" >
+           <label>Nota de cambio de información</label>
+           <textarea id="story" name="story" onchange="this.form.submit()"
+         rows="5" cols="30" {{desabilita2}}>
+       {{nota}} {{timea}}
+   </textarea>
+       </div>
+    
+    <div id="conteudo3">          
+        <!- monta os botões para ediçao, cancelar a açao e salvar além do botao para baixar uma planilha de exemplo ->      
+        <form action="{{ url_for('salvarm') }}" method="post">
+            <button Type="submit"class="btn-second" {{desabilita1}}> Guardar</button>
+        </form>  
+<form action="{{ url_for('editarm') }}" method="post">
+       
+            <button Type="submit"class="btn-primary" onclick="{{ ('editarm') }}" {{desabilita4}} {{cb1}}> Editar </button>
+            </form>
+            
+
+<form action="{{ url_for('homepagem') }}" method="get">
+             <button Type="button"class="btn-second1" {{desabilita1}} onclick="this.form.submit()" > Cancelar </button>
+             
+        </div>
+     
+    <div id="conteudo7"> 
+        
+        <p>
+            <a href="{{url_for('get_arquivom')}}" download="doencasdemilhomx.csv" type="aplicativo/pdf">Descargue el archivo csv aquí </a>
+        </p>  
+     
+    </div>
+    
+    <div id="conteudo8"> </div>
+    <div id="conteudo9">
+       
+    </div>
+    <div id="conteudo10">
+       
+    </div>
+    <div id="conteudo11"> 
+        
+    </div>
+
+
+    <div id="footer"></div>
+        <label id="edita" name="edita">{{des1}}</label>
+    </div>
+
+</form>
+</body>
+</html>

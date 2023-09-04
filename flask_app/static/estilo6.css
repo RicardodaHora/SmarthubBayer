@@ -1,0 +1,8 @@
+.btn-primary{
+    background-color: rgb(184, 184, 184);
+    padding: 7px 25px;
+    border: 1px solid #999;
+    border-radius : 7px;
+    cursor: pointer;
+    margin: 8px 110px 8px 50px;
+    }

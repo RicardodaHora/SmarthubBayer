@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquivo para o Cultivo</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='estilo18.css')}}">
+</head>
+<body>
+<div class="conteudo2">
+        <div id="nav">
+             <div id="menu">
+            <a href="{{url_for('homepagear')}}"> Doenças do milho</a>
+            <a href="{{url_for('page1ar')}}"> Corn note</a>
+            <a href="{{url_for('page2ar')}}"> DREC_NREC </a>
+            
+
+        </div>
+        </div>
+    <div id="sidebar"></div>
+     <div id="main">  
+
+     </div>
+
+<div id="conteudo7">
+        <!- carrega uma pagina que contem os dados do dataframe com os dados da comparação dos arquivos novo e inserido.->
+        <iframe src="{{url_for('page7ar')}}" scrolling = "yes" height="100%" margiheight ="10">
+        </iframe>
+    </div>
+    <div id="conteudo6">       
+    </div>
+    <div id="conteudo8">
+        <p>
+
+         </p>
+    </div>
+    <div id="main2">
+         
+        </div>
+    <div id="main1">
+            <p>
+               <label  for="meuArquivo" class="quebra"> Datos que han cambiado de la hoja del Corp Monitor:</label>
+            </p>
+    </div>
+    <div id="main3">
+	<!- carrega os botões para a confirmação ou não dos dados ->
+        <form action="{{ url_for('salvo6ar') }}" method="post">
+            <button Type="submit"class="btn-second" {{desabilita1}}> Guardar </button>
+        </form>             
+
+        <form action="{{ url_for('page2ar') }}" method="get">
+             <button Type="button"class="btn-second1" {{desabilita1}} onclick="this.form.submit()" > Cancelar </button>
+        </form> 
+    </div>
+    <div id="main4">     
+    </div>
+    <div id="footer"></div>
+    </div>
+</body>
+</html>

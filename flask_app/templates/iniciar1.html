@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='estilo1.css')}}">
+</head>
+<body>
+<!- monta a area onde o usuario escolhe o pais e faz o login com os dados do domino ou de usuario ->
+<form action="{{ url_for('iniciar') }}" method="post" {{desabilita3}}>    
+<div class="conteudo">
+        <div id="nav">         
+        </div>
+<div id="sidebar"></div>
+<div id="main">
+    <p>
+        <h2>Login</h2>
+    </p>    
+    <p>     
+    <label id ="User" >Username:</label>
+    <input type="text" name="User" heigth="25px" width="100%"/>
+    </p>  
+    <p>
+    <label id ="password" >Password:</label>
+    <input type="password" name="password"  heigth="25px" width="100%"/>
+    
+            <p>
+               <label id="status">Choose the country</label>
+               <select id="cb1" name="cb1" heigth="30px" width="100%"/>                                                        
+                <option value="Brasil" >Brazil</option>
+                <option value="Argentina" >Argentina</option>
+                <option value="Mexico" >Mexico</option> 
+		<option value="Paraguai" >Paraguay</option>
+                <option value="Uruguai" >Uruguay</option>                              
+               </select>
+            </p> 
+    </p> 
+    <p>
+        <label id ="check" >Use Domino Credentials</label>    
+        <input type="checkbox" id ="tipo" name="tipo" onvalue="1", offvalue="0"  checked> <br/> 
+    </p> 
+    <p> 
+    <button Type="button"class="btn-second1" {{desabilita1}}  onclick="this.form.submit()" > Enter </button>
+    <button Type="button"class="btn-second2" {{desabilita1}} onclick="" > Cancel </button>
+    </p>
+    <p>      
+        <label {{invisivel}}> Please check correct country or username and password </label>
+    </p>  
+</div>
+
+     
+<div id="conteudo8">     
+</div>
+    
+<div id="footer"></div>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquivo para o Cultivio</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='estilo5.css')}}">
+</head>
+<body>   
+<!- carrega os dados de comparação entre os atuais e dos dados inseridos da gestão de produtos do pais ->          
+        {% for table in table%}          
+      
+        {{ table|safe }}
+              
+        {% endfor %} 
+              
+</body>
+</html>

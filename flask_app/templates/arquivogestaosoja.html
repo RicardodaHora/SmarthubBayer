@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquivo para o Cultivo</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='estilo4a.css')}}">
+</head>
+<body>
+<div class="conteudo2">
+        <div id="nav">
+             <div id="menu">
+            <a href="{{url_for('homepage')}}"> Doenças do milho</a>
+            <a href="{{url_for('page1')}}"> Corn note</a>
+            <a href="{{url_for('page2')}}"> DREC_NREC </a>
+            
+
+        </div>
+        </div>
+    <div id="sidebar"></div>
+     <div id="main">
+    <form action="{{ url_for('post_arquivo2') }}" method="post" enctype="multipart/form-data">   
+        <p>	
+            	<!- monta a area onde o usuario pode baixar a planilha e inserir uma nova ->
+                <label  for="meuArquivo" class="quebra"> Selecione a planilha com os dados para a Gestão de Produtos:</label>
+        </p>
+        <br/>
+        <p>            
+            <a href="{{url_for('get_arquivo4')}}" download="dadosparafiltro.xlsx" type="text/xlsx"> Baixe o arquivo de gestão de produtos</a>
+        </p>
+        <input type="file" id="meuArquivo" name="meuArquivo" accept=".xlsx" pattern="[a-zA-Z0-9]{5}" required>
+        <button Type="subimit" value="Subimit" class="btn-second"> Enviar </button>   
+        <button Type="reset" value = "Reset" class="btn-second1"> Cancelar </button>
+    </form>
+
+     </div>
+     <div id="conteudo6">
+        <p>  
+	    <!- monta o link para ser baixada a planilha final para a entrega ->	 
+            <label  for="meuArquivo" class="quebra"> Baixar a Planilha para o cultivio:</label>
+         </p>
+    </div>
+
+<div id="conteudo7">
+        <p>
+            <!- monta a area onde o usuario pode baixar a planilha e inserir uma nova ->    
+            <a href="{{url_for('get_arquivo2')}}" download="arquivo_para_md.xlsx" type="text/xlsx"> Baixar a planilha do Cultivio</a>
+        </p>
+        <form action="{{ url_for('post_arquivo2') }}" method="post" enctype="multipart/form-data">   
+           <button Type="subimit" value="Subimit" class="btn-second"> Atualizar planilha do cultivio </button> 
+        </form>
+    </div>
+<div id="conteudo8"></div>
+<div id="main2"></div>
+
+<div id="main1">
+
+       <form action="{{ url_for('post_arquivo1') }}" method="post" enctype="multipart/form-data">   
+            <p>
+		<!- monta a area onde o usuario pode baixar a planilha e inserir uma nova ->
+                <label  for="meuArquivo" class="quebra"> Selecione a planilha com base para cálculo do RM:</label>
+            </p>
+            <br/>
+            <p>
+            <a href="{{url_for('get_arquivo6')}}" download="rm_valores.xlsx" type="text/xlsx"> Baixe o arquivo de exemplo para o RM</a>
+         </p>
+         <input type="file" id="meuArquivo" name="meuArquivo" accept=".xlsx" pattern="[a-zA-Z0-9]{5}" required>
+         <button Type="subimit" value="Subimit" class="btn-second"> Enviar </button>   
+         <button Type="reset" value = "Reset" class="btn-second1"> Cancelar </button>
+    </form>
+
+    </div>
+    <div id="main3">
+
+        <form action="{{ url_for('post_arquivo3') }}" method="post" enctype="multipart/form-data">   
+             <p>
+		 <!- monta a area onde o usuario pode baixar a planilha e inserir uma nova ->
+                 <label  for="meuArquivo" class="quebra"> Selecione a planilha com os dados de Crop Monitoring:</label>
+             </p>
+             <br/>
+             <p>
+             <a href="{{url_for('get_arquivo6')}}" download="cropmonitoring_valores.xlsx" type="text/xlsx"> Baixe o arquivo com o exemplo para Crop Monitoring </a>
+          </p>
+          <input type="file" id="meuArquivo" name="meuArquivo" accept=".xlsx" pattern="[a-zA-Z0-9]{5}" required>
+          <button Type="subimit" value="Subimit" class="btn-second"> Enviar </button>   
+          <button Type="reset" value = "Reset" class="btn-second1"> Cancelar </button>
+     </form>
+ 
+     </div>
+     <div id="main4">
+
+        <form action="{{ url_for('post_arquivo4') }}" method="post" enctype="multipart/form-data">   
+             <p>
+		 <!- monta a area onde o usuario pode baixar a planilha e inserir uma nova ->
+                 <label  for="meuArquivo" class="quebra"> Selecione a planilha com base para o CorneNote:</label>
+             </p>
+             <br/>
+             <p>
+             <a href="{{url_for('get_arquivo3')}}" download="cornenoteexemplo.xlsx" type="text/xlsx"> Baixe o arquivo com o exemplo para CorneNote</a>
+          </p>
+          <input type="file" id="meuArquivo" name="meuArquivo" accept=".xlsx" pattern="[a-zA-Z0-9]{5}" required>
+          <button Type="subimit" value="Subimit" class="btn-second"> Enviar </button>   
+          <button Type="reset" value = "Reset" class="btn-second1"> Cancelar </button>
+     </form>
+ 
+     </div>
+    <div id="footer"></div>
+    </div>
+</body>
+</html>

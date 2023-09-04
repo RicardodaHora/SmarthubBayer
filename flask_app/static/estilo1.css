@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.conteudo{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .5fr 1fr 1.5fr;
+    grid-template-areas: "nav  nav nav"
+                         "sidebar  main conteudo8"                         
+                         "footer  footer footer" ;   
+    background-color: rgb(234, 234, 234);
+}
+#nav{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    grid-area: nav;
+    font-size:8px;
+    font-family:  Verdana;
+    font-weight: 350;
+}
+
+#main {
+    display: flex;
+    justify-content:center;
+    flex-direction: column; 
+    align-items: center;   
+    background-color: rgb(234, 234, 234);
+    grid-area: main;
+    font-size:18px;
+    border: 2px solid black;
+    border-radius : 14px;
+    font-weight: 550;
+ 
+}
+#main input{
+    font-family: 'Times New Roman', Times, serif;   
+    height: 20px;
+    padding: 1px;
+    border: 1px solid black; 
+    margin-top: 5px; 
+    font-size:18px;  
+}
+#main select{
+    font-family: 'Times New Roman', Times, serif;   
+    width: 165px;
+    height: 26px;
+    padding: 1px;
+    border: 1px solid black; 
+    margin-top: 5px; 
+    font-size:14px; 
+}
+#sidebar {
+    background-color: rgb(234, 234, 234);
+    grid-area: sidebar;
+}
+.btn-second1{
+    background-color: rgb(184, 184, 184);
+    padding: 7px 22px;
+    border: 1px solid #999;
+    border-radius : 7px;
+    cursor: pointer;
+    margin-right: 110px;
+    margin-top: 25px;
+    }
+    .btn-second1:hover {
+    background-color:  rgb(165, 220, 165);
+    transition: 1s;
+    }
+    .btn-second2{
+    background-color: rgb(184, 184, 184);
+    padding: 7px 17px;
+    border: 1px solid #999;
+    border-radius : 7px;
+    cursor: pointer;
+    margin-top: 25px;
+    }
+    .btn-second2:hover {
+    background-color:  rgb(165, 220, 165);
+    transition: 1s;
+    }
+
+#conteudo8{
+    background-color: rgb(234, 234, 234);
+    grid-area: conteudo8;
+}
+
+#footer{
+   background-color: rgb(234, 234, 234);
+    grid-area: footer;
+}

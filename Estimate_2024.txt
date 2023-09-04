@@ -1,0 +1,57 @@
+
+
+Q1 - Density Corn / H2H Soybean
+
+Discovery - 1 sprint
+Project infrastructure (service provisioning, versioning and acess) - 1 Sprint
+Definition and development for consuming and editing external files (*Console) - 1 Sprint
+Definition of internal sources and creation of pipelines to ingest (*BigQuery Dataform)  - 1 Sprint
+Mapping and development of Console transformations on BigQuery(or Datalake) - 2 sprint
+Mapping of Cultivio transformations transformations on BigQuery(or Datalake) - 2 sprint
+Data quality and data tests - 2 sprint
+Documentation  - 0.5 Sprint
+Create database to API  - 0.5 Sprint
+Production  - 1 Sprint
+
+Q2 - Catalog (Characteristics ) Corn / Ranking Soybean / Characteristics  Soybean
+
+Discovery - 1 sprint
+Project infrastructure (service provisioning, versioning and acess) - 1 Sprint
+Definition and development for consuming and editing external files (*Console) - 1 Sprint
+Definition of internal sources and creation of pipelines to ingest (*BigQuery Dataform)  - 1 Sprint
+Mapping and development of Console transformations on BigQuery(or Datalake) - 2 sprint
+Mapping of Cultivio transformations transformations on BigQuery(or Datalake) - 2 sprint
+Data quality and data tests - 2 sprint
+Documentation  - 0.5 Sprint
+Create database to API  - 0.5 Sprint
+Production  - 1 Sprint
+
+
+Q3 - Catalog ( Diseases ) Corn / Density Soybean / Dieases Soybean
+
+Discovery - 1 sprint
+Project infrastructure (service provisioning, versioning and acess) - 1 Sprint
+Definition and development for consuming and editing external files (*Console) - 1 Sprint
+Definition of internal sources and creation of pipelines to ingest (*BigQuery Dataform)  - 1 Sprint
+Mapping and development of Console transformations on BigQuery(or Datalake) - 2 sprint
+Mapping of Cultivio transformations transformations on BigQuery(or Datalake) - 2 sprint
+Data quality and data tests - 2 sprint
+Documentation  - 0.5 Sprint
+Create database to API  - 0.5 Sprint
+Production  - 1 Sprint
+
+
+Q4 - CropMonitoring / Catalog ( Dieases ) Soybean 
+
+Discovery - 1 sprint
+Project infrastructure (service provisioning, versioning and acess) - 1 Sprint
+Definition and development for consuming and editing external files (*Console) - 1 Sprint
+Definition of internal sources and creation of pipelines to ingest (*BigQuery Dataform)  - 1 Sprint
+Mapping and development of Console transformations on BigQuery(or Datalake) - 2 sprint
+Mapping of Cultivio transformations transformations on BigQuery(or Datalake) - 2 sprint
+Data quality and data tests - 2 sprint
+Documentation  - 0.5 Sprint
+Create database to API  - 0.5 Sprint
+Production  - 1 Sprint
+
+

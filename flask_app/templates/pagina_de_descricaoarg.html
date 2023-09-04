@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquivo para o Cultivio</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='estilo5.css')}}">
+</head>
+<body>
+    <!- carrega os dados do dataframe com informações do produto da pagina de note em formato de um documento ->
+    <table class="table table-striped table-bordered">
+    
+          <td><img src="{{url_for('static',filename='bayer.png')}}" width="150" height="150" ></td>
+          <td> <h1> Información del Producto</h1>  </td> 
+        </tr>
+        <tr> 
+    </table> 
+        <p>
+    <table id="corpo" class="table table-striped table-bordered">       
+        {% for dado in dados%}          
+        <tr>
+          
+            <td> <h2> {{ dado}}:</h2>  </td>
+            <td> <h2> {{ valor1[dado]}}  </h2>  </td>      
+          
+        </tr>         
+        {% endfor %} 
+        </p>
+        </tr>  
+
+    </table>
+    
+  
+
+</body>
+</html>

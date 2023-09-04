@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corn note</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='estilo3.css')}}">
+</head>
+<body>
+
+<div class="conteudo">
+        <div id="nav">
+             <div id="menu">
+           <a href="{{url_for('homepage')}}"> Doenças do milho</a>
+            <a href="{{url_for('page1')}}"> Corn note</a>
+            <a href="{{url_for('page2')}}"> DREC_NREC </a>
+            <a href="{{url_for('gestaoprodutos')}}"> Gestão de Produtos</a>
+            <label>{{nome}}</label> 
+
+        </div>
+        </div>
+<form action="{{ url_for('page1') }}" method="post" {{desabilita3}}>
+    <!- monta a area onde o usuario escolhe os dados do produto pelos combos ->	        
+    <div id="main">
+             <div id="produto">
+                <label>Produto</label>
+               </div>
+
+            <div id="cb1">
+               <p>
+                <select id="cb1" name="cb1" onchange="this.form.submit()" {{desabilita3}}>
+                  <option value="{{ cb1 }}"> {{ cb1}}</option>
+
+           {% for produto in produt1 %}
+            <option value="{{ produto }}">{{ produto}}</option>
+          {% endfor %}
+                   <option value="" ></option>
+       </select>
+          </p>
+
+                </div>
+        </div>
+         <div id="main1">
+         <div id="produto2">
+                <label>Biotecnologia</label>
+               </div>
+      <div id="cb2">
+             <p1>
+               <p>
+                <select id="cb2" name="cb2" onchange="this.form.submit()" {{desabilita3}} >
+                  <option value="{{ cb2 }}" > {{ cb2 }}</option>
+               {% for bio_tecnologia in bio_tecnologia1%}
+                <option value="{{ bio_tecnologia }}">{{ bio_tecnologia }}</option>
+                {% endfor %}
+
+                  <option value="" ></option>
+                </select>
+          </p>
+               </p1>
+                </div>
+</div>
+         <div id="main2">
+        <div id="produto3">
+                <label>Pipeline</label>
+               </div>
+       <div id="cb3">
+             <p1>
+               <p>
+                <select id="cb3" name="cb3" onchange="this.form.submit()" {{desabilita3}} >
+                  <option value="{{ cb3 }}"> {{ cb3}}</option>
+                  {% for pipeline in pipeline1%}
+                  <option value="{{ pipeline }}">{{ pipeline }}</option>
+                    {% endfor %}
+                   <option value="" ></option>
+          </select>
+          </p>
+               </p1>
+                </div>
+        </div>
+         <div id="main3">
+        <div id="produto4">
+                <label>Nota a ser Editada </label>
+               </div>
+            <div id="cb4">
+               <p>
+                <select id="cb4" name=cb4 {{desabilita2}}>
+                <option value="{{ cb4 }}"> {{ cb4}}</option>
+                {% for dados in dados%}
+                  <option value="{{ dados }}">{{ dados }}</option>
+                    {% endfor %}
+            </select>
+          </p>
+            </div>            
+          <p>
+	    <!- monta a area onde o usuario escolhe os dados que serao colocados na nota ->	
+            <label>Escolha ou descreva</label>
+            <div id="cb5">
+            <select id="cb5" name=cb5 onchange="this.form.submit()" {{desabilita2}}>
+            <option value="{{ cb5 }}"> {{ cb5}}</option>
+            {% for dados1 in dados1%}
+              <option value="{{ dados1 }}">{{ dados1 }}</option>
+                {% endfor %}
+        </select>
+      </p>      
+        <p>
+            <textarea id="story1" name="story1"
+          rows="8" cols="36"  {{desabilita2}} {{cursor1}}> {{rec1}}</textarea>              
+    
+          <button Type="button"class="btn-second3" onclick="this.form.submit()" {{desabilita1}}> Continuar adicionando </button>
+              
+        </div>
+
+        </div>
+</form>
+    <div id="conteudo3">
+            <label>Nota da mudança das informações</label>
+        <p>
+            <textarea id="story" name="story"
+          rows="4" cols="36"  {{desabilita2}} {{rquer1}}>{{info1}}</textarea>      
+    
+        </p>
+        </div>
+     <div id="main5">
+        
+        </div>
+     <div id="conteudo4">
+     <!- monta os botões para ediçao, cancelar a açao e salvar além do botao para baixar uma planilha de exemplo ->
+  <form action="{{ url_for('editar2') }}" method="post">
+            <button Type="button"class="btn-primary" {{desabilita4}} onclick="this.form.submit()"> Editar </button>
+  </form>
+            <form action="{{ url_for('salvar2') }}" method="post">
+              <button Type="button"class="btn-second" {{desabilita1}} onclick="this.form.submit()"> Salvar </button>
+            </form>
+            <form action="{{ url_for('page1') }}" method="get">
+             <button Type="button"class="btn-second1"  onclick="this.form.submit()" > Cancelar </button>
+            
+            </form>
+            <button Type="button"class="btn-second2" {{desabilita1}}>  </button>
+            
+        </div>
+    <div id="conteudo5">
+	    <!- monta a area onde ficam os dados do produto selecionado ->
+            <label>Informações dos Hibridos</label>
+            <iframe src="{{url_for('page3')}}" scrolling = "yes" height="100%" margiheight ="10">
+            </iframe>
+        </div>           
+      
+        
+    <div id="conteudo7">
+          <p>
+            <a href="{{url_for('get_arquivo3')}}" download="notedescrip.csv"  type="text/csv">Baixe o arquivo csv aqui </a>
+        </p>         
+    </div>
+    <div id="footer"></div>
+    </div>
+</body>
+</html>

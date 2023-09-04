@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arquivo para o Cultivo</title>
+     <link rel="stylesheet" href="{{url_for('static',filename='estilo18.css')}}">
+</head>
+<body>
+<div class="conteudo2">
+        <div id="nav">
+             <div id="menu">
+            <a href="{{url_for('homepagear')}}"> Enfermedades del maiz</a>
+            <a href="{{url_for('page1ar')}}"> Corn note</a>
+            <a href="{{url_for('page2ar')}}"> DREC_NREC </a>
+            
+
+        </div>
+        </div>
+    <div id="sidebar"></div>
+     <div id="main">  
+
+     </div>
+
+<div id="conteudo7">
+        <!- carrega os 100 dados atuais do arquivo de nitrogenio e densidade do pais->
+        <iframe src="{{url_for('page4aar')}}" scrolling = "yes" height="100%" margiheight ="10">
+        </iframe>
+    </div>
+    <div id="conteudo6">       
+    </div>
+    <div id="conteudo8">
+        <p>
+
+         </p>
+    </div>
+    <div id="main2">
+         
+        </div>
+    <div id="main1">
+	<!- monta a area onde o usuario pode baixar a planilha e inserir uma nova ->
+        <form action="{{ url_for('post_arquivoar') }}" method="post" enctype="multipart/form-data">   
+            <p>
+                <p>
+                <a href="{{url_for('get_arquivo5ar')}}" download="D_N_REC.xlsx" type="text/xlsx"> Descargar el archivo</a>
+             </p>
+                <label  for="meuArquivo" class="quebra"> Seleccione la hoja de trabajo con densidad y recomendación de nitrógeno:</label>
+            </p>
+             <input type="file" id="meuArquivo" name="meuArquivo" accept=".xlsx" pattern="[a-zA-Z0-9]{5}" required>
+             <button Type="subimit" value="Subimit" class="btn-second"> Mandar </button>   
+             <button Type="reset" value = "Reset" class="btn-second1"> Cancelar </button>
+        </form>
+     
+    </div>
+    <div id="main3">
+        
+    </div>
+    <div id="main4">     
+    </div>
+    <div id="footer"></div>
+    </div>
+</body>
+</html>
